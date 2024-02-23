@@ -1,0 +1,13 @@
+services:
+  front: 
+    container_name: front
+    image:  ghcr.io/maelbizot/tp-final-devops-front:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - back
+  back:
+    container_name: back
+    image:  ghcr.io/maelbizot/tp-final-devops-back:latest
+    ports:
+      - "8080:80"
